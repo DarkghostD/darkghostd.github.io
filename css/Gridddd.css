@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.Div-contenedor{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav nav"
+    "main main main aside"
+    "main main main aside"
+    "video video video aside"
+    "footer footer footer footer"
+    ;
+}
+header{
+    background-color: #2C394B ;
+    color: #DDDDDD;
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: header;
+}
+main{
+    background-color: #DDDDDD;
+    grid-area: main;
+}
+main p{
+    font-size: 20px;
+}
+aside{
+    background-color: #334756;
+    grid-area: aside;
+    color: rgb(197, 197, 197);
+    text-align: center;
+}
+header, main, footer, aside, .video1, .Div-nav{
+    padding: 8px;
+    border: 2px solid #334756;
+    border-radius: 10px;
+    font-family: Liuu;
+}
+.video1{
+    background-color: #2f4352;
+    grid-area: video;
+    display: flex;
+}
+footer{
+    background-color: rgb(221, 221, 221);
+    grid-area: footer;
+    text-align: center;
+}
+@font-face {
+    font-family:"Liuu";
+    src: url(../Fonts/Lato-LightItalic.ttf);
+}
+h1{
+    text-shadow: 1.5px 1.5px 1.5px #FEFFE2;
+    display: inline-block;
+}
+.logo{
+    width: 90px;
+    height: auto;
+    text-align: right;
+    display: inline-block;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px rgb(0, 0, 0);
+}
+.Div-nav{
+    grid-area: nav;
+    background-color: #334756;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: #DDDDDD;
+    font-size: 18px;
+    padding: 10px;
+    text-shadow: 1.4px 1.4px 1.4px #FEFFE2;
+}
+.Imagenes-aside{
+    width: 200px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.subtitulos-main{
+    text-shadow: 1.4px 1.4px 1.4px #535353;
+}
+@media(max-width:800px){
+    .Div-contenedor{
+        grid-template-areas: 
+            "header header header header"
+            "nav nav nav nav"
+            "main main main main"
+            "aside aside aside aside"
+            "video video video video"
+            "footer footer footer footer"
+    }
+    a{
+        padding: 0px;
+    }
+}
+a:hover{
+    background-color: #4f6a91;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.Gif{
+    height: 160px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.redes{
+    height: 54px;
+    width: auto;
+    text-decoration: none;
+}
+.Noticiass{
+    text-align: center;
+}
